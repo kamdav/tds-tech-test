@@ -10,3 +10,9 @@ export type Currency = {
   symbol_first: boolean;
   thousands_separator: string;
 };
+
+export type Conversion = {
+  from: string
+  to: string
+  amount: string;
+};

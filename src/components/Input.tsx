@@ -2,7 +2,7 @@ type InputProps = {
   title: string;
   inputName: string;
   onChange?: (value: string) => void;
-  value?: string;
+  value?: number;
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -15,14 +15,16 @@ export const Input: React.FC<InputProps> = ({
     onChange?.(e.target.value);
   }
 
-  return <>
-    <label htmlFor={inputName}>{title}</label>
-    <input
-      type="text"
-      id={inputName}
-      name={inputName}
-      onChange={onInputChange}
-      value={value}
-    />
-  </>
+  return (
+    <>
+      <label htmlFor={inputName}>{title}</label>
+      <input
+        type="text"
+        id={inputName}
+        name={inputName}
+        onChange={onInputChange}
+        value={value}
+      />
+    </>
+  )
 }
