@@ -1,6 +1,6 @@
 import './App.css'
+import { CurrencySelect } from './components/CurrencySelect';
 import { Input } from './components/input'
-import { Select } from './components/select'
 import { useCurrencies } from './hooks/useCurrencies';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     return <div>An error occured, please try again</div>;
   }
 
-  console.log(currencies)
+  // console.log(currencies)
 
   return (
     <div>
@@ -23,17 +23,19 @@ function App() {
         title="From Amount:"
         inputName="fromAmount"
       />
-      <Select
+      <CurrencySelect
         title="Currency"
         selectName="fromCurrency"
+        currencies={currencies}
       />
       <Input
         title="To Amount:"
         inputName="toAmount"
       />
-      <Select
+      <CurrencySelect
         title="Currency"
         selectName="toCurrency"
+        currencies={currencies}
       />
     </div>
   )
