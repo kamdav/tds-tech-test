@@ -1,3 +1,6 @@
+// This file is not named correctly, I would instead consider renaming it to apiTypes or responses
+// since these are type interfaces of the API responses
+
 export type Currency = {
   code: string;
   decimal_mark: string;
