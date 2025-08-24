@@ -1,11 +1,24 @@
 import './App.css'
 import { Input } from './components/input'
 import { Select } from './components/select'
+import { useCurrencies } from './hooks/useCurrencies';
 
 function App() {
+  const { loading, error, currencies } = useCurrencies();
+
+  if (loading) {
+    return <div>...Loading</div>;
+  }
+
+  if (error) {
+    return <div>An error occured, please try again</div>;
+  }
+
+  console.log(currencies)
+
   return (
     <div>
-      <h1>Hello world</h1>
+      <h1>Currency Conversion</h1>
       <Input
         title="From Amount:"
         inputName="fromAmount"
