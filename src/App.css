@@ -4,3 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+
+.conversion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

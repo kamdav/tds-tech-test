@@ -2,7 +2,7 @@ type InputProps = {
   title: string;
   inputName: string;
   onChange?: (value: string) => void;
-  value?: number;
+  value?: string;
 }
 
 export const Input: React.FC<InputProps> = ({

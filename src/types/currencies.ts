@@ -12,7 +12,14 @@ export type Currency = {
 };
 
 export type Conversion = {
-  from: string
-  to: string
-  amount: string;
+  amount: number;
+  date: string;
+  from: string;
+  meta: {
+    code: number;
+    disclaimer: string;
+  };
+  timestamp: number;
+  to: string;
+  value: number;
 };

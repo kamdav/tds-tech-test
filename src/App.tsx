@@ -17,11 +17,6 @@ function App() {
     amount: amountFrom
   });
 
-  // console.log('amountFrom', amountFrom)
-  // console.log('currencyFrom', currencyFrom)
-  // console.log('currencyTo', currencyTo)
-  console.log('...conversionResult', conversionResult)
-
   if (currenciesLoading || conversionLoading) {
     // I would consider a visual loading state on the input fields in the case that the query is taking too long
   }
@@ -34,29 +29,35 @@ function App() {
   return (
     <div>
       <h1>Currency Conversion</h1>
+
       <div className="conversion-wrapper">
-        <Input
-          title="From Amount:"
-          inputName="fromAmount"
-          onChange={(value) => setAmountFrom(value)}
-        />
-        <CurrencySelect
-          title="Currency"
-          selectName="fromCurrency"
-          currencies={currencies}
-          onChange={(value) => setCurrencyFrom(value)}
-        />
-        <Input
-          title="Converted Amount:"
-          inputName="convertedAmount"
-          value={conversionResult.value || 0}
-        />
-        <CurrencySelect
-          title="Currency"
-          selectName="toCurrency"
-          currencies={currencies}
-          onChange={(value) => setCurrencyTo(value)}
-        />
+        <div className="input-wrapper">
+          <Input
+            title="From Amount:"
+            inputName="fromAmount"
+            onChange={(value) => setAmountFrom(value)}
+          />
+          <CurrencySelect
+            title="Currency"
+            selectName="fromCurrency"
+            currencies={currencies}
+            onChange={(value) => setCurrencyFrom(value)}
+          />
+        </div>
+
+        <div className="input-wrapper">
+          <Input
+            title="Converted Amount:"
+            inputName="convertedAmount"
+            value={conversionResult?.value?.toFixed(2) || ""}
+          />
+          <CurrencySelect
+            title="Currency"
+            selectName="toCurrency"
+            currencies={currencies}
+            onChange={(value) => setCurrencyTo(value)}
+          />
+        </div>
       </div>
     </div>
   )
