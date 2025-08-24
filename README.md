@@ -1,6 +1,6 @@
 # TDS Tech Test - Kam Dav
 
-Thank you for taking the time to review my tech test! I was really getting into working on this, and could've spent more time developing and improving it, along with setting up a more aesthetic user interface, which I ran out of time to work. In total I spent about 2 and a half hours on this tech test. I've left a few comments around the project to explain my thinking.
+Thank you for taking the time to review my tech test! I was really getting into working on this, and could've spent more time developing and improving it, along with setting up a more aesthetic user interface, which I ran out of time to work on. In total I spent about 2 and a half hours on this tech test. I've left a few comments around the project to explain my thinking.
 
 
 ### Development Summary
