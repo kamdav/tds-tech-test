@@ -16,7 +16,9 @@ export const useCurrencies = () => {
       try {
         const response = await fetch(`https://api.currencybeacon.com/v1/currencies?api_key=${apiKey}`);
         const rawData = await response.json();
+        // Had some difficulty with the data and using array methods, which I've resolved by wrapping it around Object.values()
         const data: Currency[] = Object.values(rawData);
+        // I noticed one or more of the items were not a currency related object, so I've removed that from the stored state array
         const sanitisedData = data.filter((item) => item.name);
         setCurrencies(Object.values(sanitisedData));
       } catch (error) {
